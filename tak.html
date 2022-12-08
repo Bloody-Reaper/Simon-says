@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        let checker=1
+        const pc = []
+        let a = 1
+        pc[0]=parseInt(a)
+        pc[2]="1"
+        pc[1]="2"
+        const player=[]
+        function red(){
+            player.push(document.getElementById('uno').value)
+            console.log(player)
+        }
+        function yel(){
+            player.push(document.getElementById('quadro').value)
+            console.log(player)
+        }
+        function gre(){
+            player.push(document.getElementById('tres').value)
+            console.log(player)
+        }
+        function blu(){
+            player.push(document.getElementById('dos').value)
+            console.log(player)
+        }
+        function compare(){
+            console.log(pc)
+            if(pc[0]!=player[0]) alert("not_compared")
+            else alert("gut")
+            checker++;
+
+        }
+    </script>
+   
+</head>
+<body>
+   
+    <button id="uno" onclick="red()" value="1">Red</button>
+    <button id="dos" value=2 onclick="blu()">Blu</button>
+    <button  id="tres" value="3"  onclick="gre()">Gre</button>
+    <button id="quadro" value="4"  onclick="yel()">Yel</button>
+    <button onclick="compare()">comp</button>
+</body>
+<style>
+    /* mathrandom(3) +1 żeby nie mogło być zero 
+    pętla for do sprawdzania
+    jeśli jest błąd alert+odśwież stronę
+    dorobić style
+    start button*/
+</style>
+
+</html>
